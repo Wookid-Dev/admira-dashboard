@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DemographicsChart = ({ data }) => {
+const DemographicsChart = ({ data, options }) => {
+  useEffect(() => {
+    return () => {
+      ChartJS.getChart()?.destroy();
+    };
+  }, []);
+
   const chartData = {
     labels: data.demografía.edad.map((item) => item.rango),
     datasets: [
@@ -15,7 +22,7 @@ const DemographicsChart = ({ data }) => {
     ],
   };
 
-  return <Pie data={chartData} />;
+  return <Pie data={chartData} options={options} />;
 };
 
 export default DemographicsChart;
