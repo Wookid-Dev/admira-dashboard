@@ -12,8 +12,9 @@ import SessionsTrendChart from '@/components/Charts/SessionsTrendChart';
 import DemographicsChart from '@/components/Charts/DemographicsChart';
 import { addsData } from '@/services/google/ads';
 import { metrics } from '@/services/google/analytics';
+import { Campaña } from '@/utils/types';
 
-function calculateTotalMetrics(campaigns) {
+function calculateTotalMetrics(campaigns: Campaña[]) {
   let totalImpressions = 0;
   let totalClicks = 0;
   let totalConversions = 0;
@@ -66,7 +67,7 @@ export default function ReportingPage() {
             Demographics
           </h3>
           <div className="bg-white p-4 shadow-md rounded-lg w-full h-80 flex items-center justify-center border border-primary">
-            <DemographicsChart data={metrics} />
+            <DemographicsChart data={metrics} options={{ responsive: true }} />
           </div>
         </div>
       </div>
@@ -74,47 +75,47 @@ export default function ReportingPage() {
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaChartBar className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Total Impressions
           </h3>
-          <p className="text-xl text-accent font-bold">{totalImpressions}</p>
+          <p className="text-xl text-primary font-bold">{totalImpressions}</p>
         </div>
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaMousePointer className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Total Clicks
           </h3>
-          <p className="text-xl text-accent font-bold">{totalClicks}</p>
+          <p className="text-xl text-primary font-bold">{totalClicks}</p>
         </div>
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaExchangeAlt className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Total Conversions
           </h3>
-          <p className="text-xl text-accent font-bold">{totalConversions}</p>
+          <p className="text-xl text-primary font-bold">{totalConversions}</p>
         </div>
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaPercentage className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Conversion Rate
           </h3>
-          <p className="text-xl text-accent font-bold">
+          <p className="text-xl text-primary font-bold">
             {conversionRate.toFixed(2)}%
           </p>
         </div>
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaDollarSign className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Total Cost
           </h3>
-          <p className="text-xl text-accent font-bold">${totalCost}</p>
+          <p className="text-xl text-primary font-bold">${totalCost}</p>
         </div>
         <div className="bg-white p-4 shadow-md rounded-lg text-center border border-primary flex flex-col items-center">
           <FaMoneyBillWave className="text-2xl text-primary mb-2" />
-          <h3 className="text-primary text-lg font-semibold mb-2">
+          <h3 className="text-secondary text-lg font-semibold mb-2">
             Cost per Click
           </h3>
-          <p className="text-xl text-accent font-bold">
+          <p className="text-xl text-primary font-bold">
             ${costPerClick.toFixed(2)}
           </p>
         </div>

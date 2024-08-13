@@ -1,19 +1,23 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { MetricsData } from '@/utils/types';
 
-interface DemographicsChartProps {
-  data: MetricsData;
-  options: any;
-}
-
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DemographicsChart:React.FC<DemographicsChartProps> = ({ data, options }) => {
+interface DemographicsChartProps {
+  data: MetricsData;
+  options?: any;
+}
+
+const DemographicsChart: React.FC<DemographicsChartProps> = ({ data, options }) => {
+  const chartRef = useRef<ChartJS<'pie'> | null>(null);
+
   useEffect(() => {
     return () => {
-      ChartJS.getChart()?.destroy();
+      if (chartRef.current) {
+        chartRef.current.destroy();
+      }
     };
   }, []);
 
@@ -28,7 +32,7 @@ const DemographicsChart:React.FC<DemographicsChartProps> = ({ data, options }) =
     ],
   };
 
-  return <Pie data={chartData} options={options} />;
+  return <Pie ref={chartRef} data={chartData} options={options} />;
 };
 
 export default DemographicsChart;
