@@ -34,8 +34,8 @@ const PageViewsChart: React.FC<PageViewsChartProps> = ({ data }) => {
       {
         label: 'Vistas de Página',
         data: data.vistasPagina.map((item: any) => item.vistas),
-        borderColor: '#1A73E8',
-        backgroundColor: 'rgba(26, 115, 232, 0.5)',
+        borderColor: 'rgb(26 115 232)',
+        backgroundColor: 'rgb(26 115 232)',
       },
     ],
   };

@@ -43,7 +43,7 @@ export default function AdsManagerPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 w-full">
         <div className="max-w-full">
           <h3 className="text-primary text-xl font-semibold mb-2 text-center">
             Campaign Performance

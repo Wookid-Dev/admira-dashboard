@@ -39,8 +39,8 @@ const SessionsChart: FC<SessionsChartProps> = ({ data }) => {
       {
         label: 'Sesiones',
         data: data.map((item) => item.sesiones),
-        borderColor: '#34A853',
-        backgroundColor: 'rgba(52, 168, 83, 0.5)',
+        borderColor: 'rgb(255 87 34)',
+        backgroundColor: 'rgb(255 87 34)',
       },
     ],
   };

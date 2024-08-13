@@ -12,17 +12,17 @@ const CampaignPerformanceChart: React.FC<CampaignPerformanceChartProps> = ({ dat
       {
         label: 'Impresiones',
         data: data.campañas.map((campaña) => campaña.impresiones),
-        backgroundColor: 'rgba(26, 115, 232, 0.6)',
+        backgroundColor: 'rgb(26 115 232)',
       },
       {
         label: 'Clics',
         data: data.campañas.map((campaña) => campaña.clics),
-        backgroundColor: 'rgba(52, 168, 83, 0.6)',
+        backgroundColor: 'rgb(75 85 99)',
       },
       {
         label: 'Conversiones',
         data: data.campañas.map((campaña) => campaña.conversiones),
-        backgroundColor: 'rgba(251, 188, 5, 0.6)',
+        backgroundColor: 'rgb(255 87 34)',
       },
     ],
   };
