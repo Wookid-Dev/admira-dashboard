@@ -10,13 +10,13 @@
 
 - Se escogieron los siguientes colores para el dashboard:
     - Primario: #1A73E8
-    ![Color Primario](./public/images/1a73e8.png)
+        - ![Color Primario](./public/images/1a73e8.png)
     - Secundario: #4B5563
-    ![Color Secundario](./public/images/4b5563.png) 
+        - ![Color Secundario](./public/images/4b5563.png) 
     - Acento: #FF5722
-    ![Color Acento](./public/images/ff5722.png)
+        - ![Color Acento](./public/images/ff5722.png)
     - Background: #F3F4F6
-    ![Color Fondo](./public/images/f3f4f6.png)
+        - ![Color Fondo](./public/images/f3f4f6.png)
 
 ### Requisitos Previos
 
