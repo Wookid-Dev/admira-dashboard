@@ -26,7 +26,7 @@ ChartJS.register(
   Legend,
 );
 
-import { MetaAdsData, Anuncio } from '@/utils/types';
+import { MetaAdsData } from '@/utils/types';
 
 interface AdPerformanceChartProps {
   data: MetaAdsData;

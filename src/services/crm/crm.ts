@@ -1,3 +1,4 @@
+// TODO: Agregar logica de CRM
 export const crmData = {
   leads: [
     { nombre: 'Lead 1', costoAdquisición: 200, valorDeVida: 1000 },

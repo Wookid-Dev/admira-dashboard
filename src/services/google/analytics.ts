@@ -1,3 +1,4 @@
+// TODO: Agregar llamado ala api de analytics de google
 export const metrics = {
   vistasPagina: [
     { fecha: '2024-08-01', vistas: 300 },

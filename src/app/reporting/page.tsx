@@ -14,6 +14,7 @@ import { addsData } from '@/services/google/ads';
 import { metrics } from '@/services/google/analytics';
 import { Campaña } from '@/utils/types';
 
+// Funcion que establece los datos de los widgets
 function calculateTotalMetrics(campaigns: Campaña[]) {
   let totalImpressions = 0;
   let totalClicks = 0;

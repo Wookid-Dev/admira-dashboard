@@ -1,3 +1,4 @@
+// TODO: Agregar llamado ala api de ads de meta
 export const metaAdsData = {
   "anuncios": [
     {

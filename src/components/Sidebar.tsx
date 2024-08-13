@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,7 +8,8 @@ import { useState, useEffect } from 'react';
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-
+  
+  //Se establecen distintas configuraciones para distintos tamaños de pantalla
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -53,7 +54,9 @@ const Sidebar = () => {
             <FaBars />
           </button>
 
-          <div className={`${isExpanded ? 'mb-6' : 'mb-0'} flex justify-center`}>
+          <div
+            className={`${isExpanded ? 'mb-6' : 'mb-0'} flex justify-center`}
+          >
             <Image
               src="/images/logo-transformed.webp"
               alt="Admira Logo"
