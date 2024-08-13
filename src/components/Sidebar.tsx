@@ -32,7 +32,7 @@ const Sidebar = () => {
       {!isExpanded && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 z-50 text-primary text-white focus:outline-none"
+          className="fixed top-11 left-8 z-50 text-primary text-white focus:outline-none"
         >
           <FaBars />
         </button>

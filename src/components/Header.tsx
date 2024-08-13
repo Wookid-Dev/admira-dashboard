@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className="bg-primary text-white py-8 px-6">
-      <h1 className=" text-white text-3xl md:text-4xl font-bold">{message}</h1>
+      <h1 className="ml-20 text-white text-3xl md:text-4xl font-bold">{message}</h1>
     </header>
   );
 };
