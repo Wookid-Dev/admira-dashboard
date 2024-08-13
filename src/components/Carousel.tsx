@@ -56,7 +56,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
       </button>
       <div
         className="flex overflow-hidden space-x-4 transition-transform duration-300"
-        style={{ width: `${itemsToShow * 220 + (itemsToShow - 1) * 16}px` }} // Calculate the total width dynamically
+        style={{ width: `${itemsToShow * 220 + (itemsToShow - 1) * 16}px` }}
       >
         {data
           .slice(currentIndex, currentIndex + itemsToShow)
