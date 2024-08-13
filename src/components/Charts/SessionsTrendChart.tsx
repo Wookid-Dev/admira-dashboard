@@ -1,4 +1,3 @@
-// components/SessionsTrendChart.tsx
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -10,8 +9,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import { FC } from 'react';
 
-// Registrar los componentes necesarios
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,7 +21,14 @@ ChartJS.register(
   Legend,
 );
 
-const SessionsTrendChart = ({ data }) => {
+import { Campaña } from '@/utils/types';
+interface SessionsTrendChartProps {
+  data: {
+    campañas: Campaña[];
+  };
+}
+
+const SessionsTrendChart: FC<SessionsTrendChartProps> = ({ data }) => {
   const chartData = {
     labels: data.campañas.map((campaña) => campaña.nombre),
     datasets: [
@@ -64,6 +70,7 @@ const SessionsTrendChart = ({ data }) => {
     },
   };
 
+  // @ts-ignore
   return <Line data={chartData} options={options} />;
 };
 

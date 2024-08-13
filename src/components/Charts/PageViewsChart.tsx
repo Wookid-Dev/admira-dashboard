@@ -21,7 +21,13 @@ ChartJS.register(
   Legend,
 );
 
-const PageViewsChart = ({ data }) => {
+import { MetricsData } from '@/utils/types';
+
+interface PageViewsChartProps {
+  data: MetricsData;
+}
+
+const PageViewsChart: React.FC<PageViewsChartProps> = ({ data }) => {
   const chartData = {
     labels: data.vistasPagina.map((item: any) => item.fecha),
     datasets: [

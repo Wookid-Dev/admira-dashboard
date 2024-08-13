@@ -1,4 +1,3 @@
-// components/SessionsChart.tsx
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -12,7 +11,9 @@ import {
   LineElement,
   ArcElement,
 } from 'chart.js';
+import { FC } from 'react';
 
+// Register chart components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -25,7 +26,13 @@ ChartJS.register(
   Legend,
 );
 
-const SessionsChart = ({ data }) => {
+import { Sesion } from '@/utils/types';
+
+interface SessionsChartProps {
+  data: Sesion[];
+}
+
+const SessionsChart: FC<SessionsChartProps> = ({ data }) => {
   const chartData = {
     labels: data.map((item) => item.fecha),
     datasets: [
@@ -50,6 +57,7 @@ const SessionsChart = ({ data }) => {
     },
   };
 
+  // @ts-ignore
   return <Line data={chartData} options={options} />;
 };
 

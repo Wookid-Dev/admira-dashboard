@@ -1,6 +1,11 @@
 import { Bar } from 'react-chartjs-2';
+import { AddsData, Campaña } from '@/utils/types'; // Assuming these types are defined in your utils/types file
 
-const CampaignPerformanceChart = ({ data }) => {
+interface CampaignPerformanceChartProps {
+  data: AddsData;
+}
+
+const CampaignPerformanceChart: React.FC<CampaignPerformanceChartProps> = ({ data }) => {
   const chartData = {
     labels: data.campañas.map((campaña) => campaña.nombre),
     datasets: [

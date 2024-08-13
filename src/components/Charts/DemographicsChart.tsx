@@ -1,10 +1,16 @@
 import { useEffect } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { MetricsData } from '@/utils/types';
+
+interface DemographicsChartProps {
+  data: MetricsData;
+  options: any;
+}
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DemographicsChart = ({ data, options }) => {
+const DemographicsChart:React.FC<DemographicsChartProps> = ({ data, options }) => {
   useEffect(() => {
     return () => {
       ChartJS.getChart()?.destroy();

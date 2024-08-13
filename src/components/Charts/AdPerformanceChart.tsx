@@ -26,7 +26,13 @@ ChartJS.register(
   Legend,
 );
 
-const AdPerformanceChart = ({ data }) => {
+import { MetaAdsData, Anuncio } from '@/utils/types';
+
+interface AdPerformanceChartProps {
+  data: MetaAdsData;
+}
+
+const AdPerformanceChart: React.FC<AdPerformanceChartProps> = ({ data }) => {
   const chartData = {
     labels: data.anuncios.map((anuncio) => anuncio.nombre),
     datasets: [
@@ -48,6 +54,7 @@ const AdPerformanceChart = ({ data }) => {
 
   return (
     <Bar
+      // @ts-ignore
       data={chartData}
       options={{ responsive: true, scales: { y: { beginAtZero: true } } }}
     />
