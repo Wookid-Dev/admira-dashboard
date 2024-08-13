@@ -24,7 +24,7 @@ export default function AdsManagerPage() {
   const averageCTR = ((totalClicks / totalImpressions) * 100).toFixed(2);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-10 bg-background">
+    <div className="flex flex-col items-center justify-center w-full h-full p-4 md:p-10 bg-background">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full">
         <div className="bg-white p-4 shadow-md rounded-lg flex flex-col items-center border border-primary">
           <FaDollarSign className="text-2xl text-primary mb-2" />
@@ -43,26 +43,26 @@ export default function AdsManagerPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+        <div className="max-w-full">
           <h3 className="text-primary text-xl font-semibold mb-2 text-center">
             Campaign Performance
           </h3>
-          <div className="bg-white p-4 shadow-md rounded-lg flex items-center justify-center border border-primary h-full">
+          <div className="bg-white p-4 shadow-md rounded-lg flex items-center justify-center border border-primary h-auto">
             <CampaignPerformanceChart data={addsData} />
           </div>
         </div>
-        <div>
+        <div className="max-w-full">
           <h3 className="text-primary text-xl font-semibold mb-2 text-center">
             Ad Performance
           </h3>
-          <div className="bg-white p-4 shadow-md rounded-lg flex items-center justify-center border border-primary h-full">
+          <div className="bg-white p-4 shadow-md rounded-lg flex items-center justify-center border border-primary h-auto">
             <AdPerformanceChart data={metaAdsData} />
           </div>
         </div>
       </div>
 
-      <div className="mt-20 w-full">
+      <div className="mt-10 w-full">
         <Carousel data={crmData.leads} />
       </div>
     </div>

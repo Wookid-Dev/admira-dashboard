@@ -26,7 +26,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 w-full">
         <div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center justify-center border border-primary">
           <FaChartLine className="text-2xl text-primary mb-2" />
           <h4 className="text-secondary text-lg font-semibold">
