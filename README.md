@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Informacion General
 
-## Getting Started
+## Despliegue en PRD
+- [https://admira-dashboard.vercel.app/](https://admira-dashboard.vercel.app/)
+![Home](./public/images/home.png)
 
-First, run the development server:
+## Elecciones de diseño
+
+- La configuracion de colores primarios, secundarios, etc. Se encuentra en /tailwind.config.ts
+
+- Se escogieron los siguientes colores para el dashboard:
+    - Primario: #1A73E8
+    ![Color Primario](./public/images/1a73e8.png)
+    - Secundario: #4B5563
+    ![Color Secundario](./public/images/4b5563.png) 
+    - Acento: #FF5722
+    ![Color Acento](./public/images/ff5722.png)
+    - Background: #F3F4F6
+    ![Color Fondo](./public/images/f3f4f6.png)
+
+### Requisitos Previos
+
+- Node.js v14 o superior
+- npm o yarn
+
+### Tecnologias
+
+- NextJS 
+- TypeScript
+- ReactJS 
+- Tailwind CSS
+- ChartJS
+
+## Primeros Pasos
+
+Para correr el proyect en local/dev:
 
 ```bash
 npm run dev
@@ -14,23 +45,47 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El proyecto abrira en: [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Documentacion
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js**
+  - [Next.js Documentation](https://nextjs.org/docs)
 
-## Learn More
+- **TypeScript**
+  - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 
-To learn more about Next.js, take a look at the following resources:
+- **ReactJS**
+  - [ReactJS Documentation](https://reactjs.org/docs/getting-started.html)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Tailwind CSS**
+  - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Chart.js**
+  - [Chart.js Documentation](https://www.chartjs.org/docs/)
 
-## Deploy on Vercel
+## Pasos para hacer un deploy en Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. Crear una cuenta en Vercel
+- Si aún no tienes una cuenta, ve a [Vercel](https://vercel.com/) y regístrate. Puedes usar tu cuenta de GitHub, GitLab o Bitbucket para facilitar el proceso.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 2. Vincular tu proyecto
+- Una vez que hayas iniciado sesión en Vercel, haz clic en **"New Project"**.
+- Selecciona el repositorio donde tienes tu proyecto (GitHub, GitLab, o Bitbucket).
+- Vercel detectará automáticamente los frameworks que estás utilizando.
+
+### 3. Configurar el proyecto
+- Revisa la configuración predeterminada que Vercel ha detectado. Puedes configurar variables de entorno si tu proyecto las necesita.
+- Asegúrate de que la configuración del build (**build command**) y la carpeta de salida (**output directory**) sean correctas. Para proyectos de Next.js, la carpeta de salida es usualmente `.next` (y Vercel lo detecta automáticamente).
+
+### 4. Desplegar el proyecto
+- Haz clic en **"Deploy"** para iniciar el despliegue.
+- Vercel comenzará el proceso de construcción y despliegue de tu proyecto.
+- Una vez que el proceso se complete, recibirás un enlace con el nombre del dominio que Vercel ha asignado a tu proyecto.
+
+### 5. Verificar el despliegue
+- Una vez desplegado, visita el enlace proporcionado por Vercel para verificar que tu proyecto está funcionando correctamente.
+
+### 6. Actualizar el proyecto
+- Cada vez que hagas un push a la rama principal del repositorio (o la rama que hayas configurado para el despliegue), Vercel automáticamente construirá y desplegará la nueva versión de tu proyecto.
+
